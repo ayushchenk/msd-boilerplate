@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5f1745d5-1936-47f4-b7e9-95f3d712436b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MSD.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Handlers\DataverseCommandHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Handlers\DataverseQueryHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Handlers\DataverseRequestHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Requests\ICommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Requests\IQuery.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Requests\IRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Handlers\IRequestHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\IMapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\IServiceFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\IValidation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Definitions\Common.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Definitions\MessageNames.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValidationException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EntityExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\OrganizationServiceBulkExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\OrganizationServiceExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ServiceFactoryExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugins\PluginBaseService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Factories\ServiceFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugins\MessageAwarePluginBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plugins\PluginEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utility\Serializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\AbstractValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Validation\ValidationError.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Requests\" />
+  </ItemGroup>
+</Project>
