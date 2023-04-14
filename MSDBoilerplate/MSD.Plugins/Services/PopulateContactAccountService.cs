@@ -25,7 +25,7 @@ namespace MSD.Plugins.Services
 
             if(account != null)
             {
-                target["accountid"] = account.ToEntityReference();
+                target["parentcustomerid"] = account.ToEntityReference();
             }
         }
     }
