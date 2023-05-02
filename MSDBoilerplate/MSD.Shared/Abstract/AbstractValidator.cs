@@ -1,5 +1,6 @@
 ﻿using MSD.Shared.Abstract;
 using MSD.Shared.Exceptions;
+using MSD.Shared.Model;
 using System.Collections.Generic;
 using System.Linq;
 

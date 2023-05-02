@@ -1,4 +1,4 @@
-﻿namespace MSD.Shared.Validation
+﻿namespace MSD.Shared.Model
 {
     public class ValidationError
     {

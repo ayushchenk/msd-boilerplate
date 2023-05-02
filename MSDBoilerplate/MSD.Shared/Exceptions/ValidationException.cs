@@ -1,5 +1,5 @@
-﻿using MSD.Shared.Utility;
-using MSD.Shared.Validation;
+﻿using MSD.Shared.Model;
+using MSD.Shared.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
