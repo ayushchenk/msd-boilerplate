@@ -1,6 +1,7 @@
-﻿using System;
+﻿using MSD.Shared.Abstract;
+using System;
 
-namespace MSD.Shared.Plugins
+namespace MSD.Shared.Model
 {
     public class PluginEvent
     {
@@ -10,7 +11,7 @@ namespace MSD.Shared.Plugins
 
         public string MessageName { get; set; }
 
-        public Func<PluginBaseService> PluginService { get; set; }
+        public Func<IPluginService> PluginService { get; set; }
     }
 
     public enum EventPipeline

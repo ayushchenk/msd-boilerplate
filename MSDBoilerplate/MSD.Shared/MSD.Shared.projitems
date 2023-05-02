@@ -18,7 +18,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Handlers\IRequestHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Abstract\IMapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Abstract\IServiceFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Abstract\IValidation.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Definitions\Common.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Definitions\MessageNames.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Exceptions\ValidationException.cs" />
@@ -26,15 +25,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\OrganizationServiceBulkExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\OrganizationServiceExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ServiceFactoryExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Plugins\PluginBaseService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\IValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\IPluginService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Factories\ServiceFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Plugins\MessageAwarePluginBase.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Plugins\PluginEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\MessageAwarePluginBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\PluginEvent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utility\Serializer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validation\AbstractValidator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Validation\ValidationError.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstract\AbstractValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ValidationError.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Abstract\Cqrs\Requests\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Model\" />
   </ItemGroup>
 </Project>

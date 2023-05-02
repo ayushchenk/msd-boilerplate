@@ -3,6 +3,7 @@ using MSD.Shared.Abstract;
 using MSD.Shared.Exceptions;
 using MSD.Shared.Extensions;
 using MSD.Shared.Factories;
+using MSD.Shared.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,16 @@ namespace MSD.Shared.Plugins
 {
     public abstract class MessageAwarePluginBase : IPlugin
     {
-        protected Func<PluginBaseService> PluginServiceFactory { get; set; }
-
         protected List<PluginEvent> PluginEvents { get; set; }
 
         protected MessageAwarePluginBase() 
         {
             PluginEvents = new List<PluginEvent>();
+        }
+
+        protected MessageAwarePluginBase(List<PluginEvent> events)
+        {
+            PluginEvents = events;
         }
 
         public void Execute(IServiceProvider serviceProvider)
@@ -48,7 +52,6 @@ namespace MSD.Shared.Plugins
                 foreach (var action in filteredActions)
                 {
                     action().Execute(serviceFactory);
-                    PluginServiceFactory = null;
                 }
             }
             catch (ValidationException validationException)
